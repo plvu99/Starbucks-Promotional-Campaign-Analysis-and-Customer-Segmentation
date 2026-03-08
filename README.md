@@ -151,6 +151,8 @@ Segmentation considered behavioral variables such as:
 
 **5. Frequent Low-Spenders:** Frequent purchases but smaller transaction values.
 
+Here are the [cluster profiles](https://github.com/plvu99/Starbucks-Promotional-Campaign-Analysis-and-Customer-Segmentation/blob/main/outputs/cluster_profiles.csv).
+
 ## ✍️ Business Recommendations
 
 ### 1. Prioritize High-Value Loyalists
