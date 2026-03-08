@@ -1,178 +1,151 @@
-# ☕ Analysis of Starbucks Promotional Campaign and Customer Segmentation
+# Starbucks Promotional Campaign Analysis and Customer Segmentation
 
-## 🎯 Objective
+## 🔎 Overview
 
-To understand customer response to different offers in order to come up with better approaches to sending customers specific promotional deals.
+This project analyzes a simulated Starbucks promotional campaign to **understand how customers respond to different marketing offers and identify meaningful customer segments.** By combining demographic data, promotional offer details, and transactional behavior, the analysis uncovers patterns in customer engagement, spending behavior, and offer effectiveness.
 
-## 🖼 Business Questions
+**Machine learning models and clustering techniques** are used to identify factors influencing offer completion and to segment customers into groups with distinct behaviors. The insights help businesses design more personalized and effective marketing campaigns.
 
-1. What are better approaches to sending customer offers?
-2. What are recommended strategies regarding specific customer groups?
+## 🔐 Business Problem
+
+Marketing campaigns often send the same promotions to a large customer base despite differences in demographics, purchasing behavior, and engagement levels. This can lead to:
+- Low offer engagement
+- Inefficient marketing spending
+- Missed opportunities for personalized marketing
+
+This project aims to answer the following questions:
+- Which promotional offers are most effective?
+- Which customer characteristics influence offer completion?
+- How can customers be segmented to improve targeting strategies?
+
+The goal is to develop insights that help businesses optimize promotional campaigns and improve customer targeting.
    
 <img width="995" alt="Screenshot 2025-05-22 at 01 03 25" src="https://github.com/user-attachments/assets/5148dd85-ec68-488a-84a4-748b893f8b91" />
 
-## 🗂️ Dataset Overview
+## 📊 Dataset
 
-Data is provided by Starbucks, simulating their customer demographics and transactional activities during a promotional campaign. [Link](https://www.kaggle.com/datasets/ihormuliar/starbucks-customer-data) 
+The dataset simulates Starbucks customer activity during a one-month promotional campaign and consists of three main tables, derived from [Kaggle](https://www.kaggle.com/datasets/ihormuliar/starbucks-customer-data).
 
-The campaign lasted for one month, during which customers received a variety of offers.
+### Portfolio (Offers)
 
-Three data files are provided:
+Information about promotional offers sent to customers.
 
-- **portfolio.csv** - data about offers sent to customers (10 offers x 6 columns)
+Features include:
+- Offer type (BOGO, Discount, Informational)
+- Reward amount
+- Difficulty level
+- Offer duration
+- Promotional channels (email, mobile app, social media, web)
 
-- **profile.csv** - demographic data of customers (17,000 customers x 5 columns)
+Dataset size: 10 offers × 6 attributes
 
-- **transcript.csv** - customer response to offers and transactions made (306,648 events x 4 columns)
+### Profile (Customer Demographics)
 
-### Offers and Customers
+Customer demographic information including:
+- Age
+- Gender
+- Income
+- Membership start date
 
-- Offers of different types, duration, reward and difficulty.
+Dataset size: ~17,000 customers
 
-- Promotional channels (social media, email, mobile app and websites).
+Most customers received 3–5 offers during the campaign, while some received none.
 
-- Age, gender, income and date of becoming a member.
+### Transcript (Customer Events)
 
-- Not all customers received the same number of offers. Most customers received between 3 to 5 during the month, and some even received none.
+Tracks customer interactions with offers and purchases.
 
-### Events
+Event types include:
+- Offer received
+- Offer viewed
+- Offer completed
+- Transactions
 
-- Customer response to these offers and transactions made during the month. 
+Dataset size: 306,000+ events
 
-- Three offer-related types of events: offer received, offer viewed and offer completed.
+Each event includes a timestamp representing hours since the campaign began.
 
-- Transaction or purchases made by a customer. 
+## 📍 Methodology
 
-- Time (hour) is when each event occurred since the start of the campaign (the first offer was sent when time = 0 hour).
+### 1. Data Preprocessing
 
-## 🧩 Proposed Solution
+- Cleaned missing values
+- Converted data types
+- Created additional features such as offer aliases
+- Merged the datasets to create a unified analysis dataset
 
-**1. Data Preprocessing**
+### 2. Exploratory Data Analysis
 
-- Drop any irrelevant columns and drop/fill missing values.
+Explored patterns across:
+- Customer demographics
+- Offer characteristics
+- Customer engagement with offers
+- Transaction frequency and spending behavior
 
-- Convert columns to their proper format.
-  
-- Add a column 'offer_alias' to examine by the offer type.
-  
-- Use feature engineering by creating and merging new columns to the datasets.
+EDA helped identify offer performance trends and engagement patterns.
 
-**2. Exploratory Data Analysis**
+### 3. Predictive Modeling
 
-- Understand the customer profile, customer event behaviors and customer spending behaviors.
+Classification models were used to identify factors influencing offer completion:
+- Logistic Regression
+- Random Forest
 
-- Analyze the offer porfolio and offer effectiveness.
+Key predictors included:
+- Customer age
+- Income
+- Offer reward
+- Offer difficulty
+- Promotional channels
 
-**3. Modeling**
+### 4. Customer Segmentation
 
-- **Classification (Logistic Regression, Random Forest):** Explore the factors affecting the offer completion.
+Customer groups were identified using:
+- K-Means Clustering
+- PCA (Principal Component Analysis)
 
-- **Clustering (KMeans, PCA):** Segment customers into different groups to target personalized strategies.
+Segmentation considered behavioral variables such as:
+- Transaction frequency
+- Total spending
+- Offer engagement
+- Offer completion rates
 
-## 🧠 Key Findings
+## 🔑 Key Insights
 
-### Customer Profile
+- Most Starbucks customers in the dataset are between 40 and 70 years old, with a peak around 50–60 years. Income levels mainly fall between $50,000 and $80,000, representing a middle-to-upper-middle income segment.
+- BOGO and Discount offers are the most common promotions, while informational offers are less frequent. Offers typically last 5–7 days, with higher reward offers often requiring greater purchase difficulty.
+- Transactions are the most frequent events, while offer viewing and completion occur less often. Engagement tends to spike periodically during the campaign, likely due to scheduled promotional releases.
+- Most individual transactions are under $20, resulting in a highly skewed distribution. While most customers spend relatively small amounts overall, a small group of customers spends over $1,000, representing high-value customers.
+- Five distinct customer segments were identified:
+1. Low-Engagement Customers: Lowest transactions and offer completion rates.
+2. High-Value Loyalists: High transaction counts, highest spending, and high offer engagement.
+3. Low-Spend Infrequent Users: Low spending and low activity.
+4. Affluent Moderates: Higher income customers with moderate engagement.
+5. Frequent Low-Spenders: Frequent purchases but smaller transaction values.
 
-- Majority of customers are male, followed by female, with a smaller "Other" group.
+## ✍️ Business Recommendations
 
-- Most customers are between 40 and 70 years old, with a peak around 50–60 years, representing a mature, working-age population.
+### 1. Prioritize High-Value Loyalists
 
-- Customer incomes mainly range from 50,000 to 80,000, indicating a middle- to upper-middle-class customer base.
+Strengthen loyalty through personalized promotions, exclusive rewards, and special offers during holidays or events.
 
-### Offer Portfolio
+### 2. Improve Engagement for Moderate Segments
 
-- Starbucks promoted BOGO (Buy-One-Get-One) and Discount offers equally (~4 each), while Informational offers (no reward, just marketing) were less common.
+Encourage more frequent visits through targeted offers, seasonal promotions, and personalized product recommendations.
 
-- Most offers lasted around 5 to 7 days, while longer 10-day offers were less common. Shorter 3–4 day offers were even rarer.
+### 3. Upsell Frequent Low-Spenders
 
-- Higher rewards come with higher difficulty, and difficult offers are typically available for a longer period, giving customers more time to complete them.
+Increase transaction value through cross-selling strategies such as discounts on pastries or premium drink upgrades.
 
-- BOGO and Discount offers offer tangible rewards but differ in difficulty and duration. Discount offers are more variable in difficulty and tend to last longer. Informational offers, as expected, provide no rewards and are easier and shorter in duration.
+### 4. Redesign Ineffective Offers
 
-### Customer Event Behavior
+Offers with low view or completion rates should be adjusted by improving reward structures, simplifying requirements, or increasing promotional visibility.
 
-- Transactions are the most frequent events, followed by offer received, offer completed, and offer viewed. This suggests that while transactions are common, not all customers fully engage with the offer cycle.
+### 5. Optimize Marketing Budget Allocation
 
-- Customer activity shows clear spikes at regular intervals throughout the campaign, possibly linked to marketing pushes or offer release schedules. Activity peaks roughly every few days, indicating bursts of customer engagement.
+Reduce marketing spend on consistently disengaged customers and allocate resources toward higher-return customer segments.
 
-- Customer engagement spikes periodically throughout the campaign, indicating the impact of scheduled offer releases.
+## ⚙ Tools & Techniques
 
-### Offer Effectiveness
-
-- Offers B, D, E, F had the highest view rates (close to 1), meaning almost every customer who received them also viewed them.
-
-- Offers G, H, I had much lower view rates, suggesting that these offers were less attractive or less noticed after being received.
-
-- Offers G and H (although not viewed much) had very high completion rates — if they were viewed, customers were highly motivated to complete them.
-
-- Offers I and J had zero completion rates, meaning either they were never completed or were not effective even if viewed.
-
-### Customer Spending Behavior
-
-- Most individual transactions are small, under $20. Very few transactions are large, leading to a highly skewed distribution.
-
-- The majority of customers spent relatively low amounts overall (below 200). A small number of customers are high spenders, with totals reaching over $1,000.
-
-### Modeling
-
-- **Age** and **income** are by far the most influential predictors, followed by reward and difficulty of the offer. Marketing channels and gender information are less influential for predicting offer completion.
-
-- The optimal customer groups are 5:
-   
-   -  **Low-Engagement Customers:** Lowest transactions, lowest spending, lower offer completion.
-   
-   -  **High-Value Loyalists:** High transactions (10.4), highest spending (265), and high offer completion (8.25 offers). Likely the most engaged and high-value customers.
-   
-   - **Low-Spend Infrequent Users:** Low spending, low engagement — possible lower-priority group.
-
-   - **Affluent Moderates:** Older, wealthier, but medium engagement — mid-range in transactions and offer completions.
-
-   - **Frequent Low-Spenders:** Most frequent buyers (15.1 transactions) but lower spending (122) per transaction. Younger, moderately active customers.  
-
-## 🚀 Recommendations
-
--  **Low-Engagement Customers:** Hard to convert with normal campaigns — deprioritize or target only with high-impact efforts:
-
-   - Avoid routine promotions.
-
-   - Focus on surprise campaigns or major brand events.
-
-   - Use “win-back” discounts only occasionally.
-
-   - Or reallocate budget away from this group to higher ROI segments. 
-   
--  **High-Value Loyalists:** Ensure high satisfaction and retention. They’re already loyal, so focus on making them feel special:
-
-   - Send birthday cards with coupons.
-   
-   - Offer surprise gifts on holidays like Valentine’s Day, Mother’s Day, or Halloween.
-
-   - Maintain service quality and test exclusive perks to reinforce their value.
-  
-- **Low-Spend Infrequent Users:** Nurture early relationship and re-engage:
-   
-   - Send welcome campaigns with introductory offers.
-
-   - Highlight popular drinks or bundles to spark interest.
-
-   - Provide free drink coupons or “buy 1 get 1” promos.
-
-   - Use email/SMS to share upcoming events or product highlights.
-
-- **Affluent Moderates:** Increase engagement and build habit:
-   
-   - Send more frequent, personalized offers.
-
-   - Offer a free drink to show appreciation and initiate habit formation.
-
-   - Start a monthly newsletter (with consent) to share new products and promotions.
-   
-   - Create VIP preview access for seasonal launches.
-
-- **Frequent Low-Spenders:** Encourage upselling and cross-selling:
-   
-   - Offer discounts on pastries or bread when they buy their usual drink.
-
-   - Suggest seasonal or premium drinks with small discounts.
-
-   - Offer free toppings or syrups to increase perceived value and build habit for higher-spend orders.
+- Python (Pandas, NumPy, Matplotlib, Seaborn)
+- Machine Learning (Logistic Regression, Random Forest)
+- Customer Segmentation (K-Means Clustering, PCA (Principal Component Analysis))
