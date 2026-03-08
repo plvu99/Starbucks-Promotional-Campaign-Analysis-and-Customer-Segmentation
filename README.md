@@ -109,18 +109,42 @@ Segmentation considered behavioral variables such as:
 - Offer engagement
 - Offer completion rates
 
+<img width="671" height="547" alt="image" src="https://github.com/user-attachments/assets/fe141398-9d11-4360-abfe-dd4a34e66e81" />
+
 ## 🔑 Key Insights
 
 - Most Starbucks customers in the dataset are between 40 and 70 years old, with a peak around 50–60 years. Income levels mainly fall between $50,000 and $80,000, representing a middle-to-upper-middle income segment.
+
+<img width="1189" height="590" alt="image" src="https://github.com/user-attachments/assets/dc4eb273-36f7-4b30-a55f-3d885bcb74bc" />
+
+<img width="1184" height="590" alt="image" src="https://github.com/user-attachments/assets/2ac198c7-61d3-4024-b3ea-e00c52ab2be9" />
+
 - BOGO and Discount offers are the most common promotions, while informational offers are less frequent. Offers typically last 5–7 days, with higher reward offers often requiring greater purchase difficulty.
+
+<img width="536" height="393" alt="image" src="https://github.com/user-attachments/assets/34db2ed9-75c3-4446-87d1-e1cb8af0a22f" />
+
+<img width="536" height="393" alt="image" src="https://github.com/user-attachments/assets/dc368082-8da4-44e3-815e-fec951b0ed28" />
+
+<img width="1490" height="490" alt="image" src="https://github.com/user-attachments/assets/7446d07c-c0e1-48a6-9504-806db7a289dc" />
+
 - Transactions are the most frequent events, while offer viewing and completion occur less often. Engagement tends to spike periodically during the campaign, likely due to scheduled promotional releases.
+
+<img width="566" height="393" alt="image" src="https://github.com/user-attachments/assets/4a280e7d-8f43-4258-b78d-1b3a21a5bdc5" />
+
+<img width="868" height="470" alt="image" src="https://github.com/user-attachments/assets/65c4ef63-2550-42ba-b481-c50445a96a72" />
+
 - Most individual transactions are under $20, resulting in a highly skewed distribution. While most customers spend relatively small amounts overall, a small group of customers spends over $1,000, representing high-value customers.
+
+<img width="730" height="470" alt="image" src="https://github.com/user-attachments/assets/57c84000-043b-4f93-8528-cdfaaa4a5673" />
+
+<img width="704" height="470" alt="image" src="https://github.com/user-attachments/assets/9aa66a24-83a5-4c21-abd0-7fb337d90b3d" />
+
 - Five distinct customer segments were identified:
-1. Low-Engagement Customers: Lowest transactions and offer completion rates.
-2. High-Value Loyalists: High transaction counts, highest spending, and high offer engagement.
-3. Low-Spend Infrequent Users: Low spending and low activity.
-4. Affluent Moderates: Higher income customers with moderate engagement.
-5. Frequent Low-Spenders: Frequent purchases but smaller transaction values.
+**1. Low-Engagement Customers:** Lowest transactions and offer completion rates.
+**2. High-Value Loyalists:** High transaction counts, highest spending, and high offer engagement.
+**3. Low-Spend Infrequent Users:** Low spending and low activity.
+**4. Affluent Moderates:** Higher income customers with moderate engagement.
+**5. Frequent Low-Spenders:** Frequent purchases but smaller transaction values.
 
 ## ✍️ Business Recommendations
 
@@ -148,4 +172,4 @@ Reduce marketing spend on consistently disengaged customers and allocate resourc
 
 - Python (Pandas, NumPy, Matplotlib, Seaborn)
 - Machine Learning (Logistic Regression, Random Forest)
-- Customer Segmentation (K-Means Clustering, PCA (Principal Component Analysis))
+- Customer Segmentation (K-Means, PCA)
