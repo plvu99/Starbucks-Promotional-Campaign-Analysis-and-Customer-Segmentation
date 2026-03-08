@@ -26,7 +26,7 @@ The goal is to develop insights that help businesses optimize promotional campai
 
 The dataset simulates Starbucks customer activity during a one-month promotional campaign and consists of three main tables, derived from [Kaggle](https://www.kaggle.com/datasets/ihormuliar/starbucks-customer-data).
 
-### Portfolio (Offers)
+### 1. Portfolio (Offers)
 
 Information about promotional offers sent to customers.
 
@@ -39,7 +39,7 @@ Features include:
 
 Dataset size: 10 offers × 6 attributes
 
-### Profile (Customer Demographics)
+### 2. Profile (Customer Demographics)
 
 Customer demographic information including:
 - Age
@@ -51,7 +51,7 @@ Dataset size: ~17,000 customers
 
 Most customers received 3–5 offers during the campaign, while some received none.
 
-### Transcript (Customer Events)
+### 3. Transcript (Customer Events)
 
 Tracks customer interactions with offers and purchases.
 
