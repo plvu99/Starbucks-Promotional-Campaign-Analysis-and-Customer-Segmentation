@@ -140,10 +140,15 @@ Segmentation considered behavioral variables such as:
 <img width="704" height="470" alt="image" src="https://github.com/user-attachments/assets/9aa66a24-83a5-4c21-abd0-7fb337d90b3d" />
 
 - Five distinct customer segments were identified:
+
 **1. Low-Engagement Customers:** Lowest transactions and offer completion rates.
+
 **2. High-Value Loyalists:** High transaction counts, highest spending, and high offer engagement.
+
 **3. Low-Spend Infrequent Users:** Low spending and low activity.
+
 **4. Affluent Moderates:** Higher income customers with moderate engagement.
+
 **5. Frequent Low-Spenders:** Frequent purchases but smaller transaction values.
 
 ## ✍️ Business Recommendations
