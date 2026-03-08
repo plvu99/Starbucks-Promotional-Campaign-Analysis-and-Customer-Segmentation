@@ -155,23 +155,23 @@ Here are the [cluster profiles](https://github.com/plvu99/Starbucks-Promotional-
 
 ## ✍️ Business Recommendations
 
-### 1. Prioritize High-Value Loyalists
+### 1. Prioritize high-value loyalists
 
 Strengthen loyalty through personalized promotions, exclusive rewards, and special offers during holidays or events.
 
-### 2. Improve Engagement for Moderate Segments
+### 2. Improve engagement for moderate segments
 
 Encourage more frequent visits through targeted offers, seasonal promotions, and personalized product recommendations.
 
-### 3. Upsell Frequent Low-Spenders
+### 3. Upsell frequent low-spenders
 
 Increase transaction value through cross-selling strategies such as discounts on pastries or premium drink upgrades.
 
-### 4. Redesign Ineffective Offers
+### 4. Redesign ineffective offers
 
 Offers with low view or completion rates should be adjusted by improving reward structures, simplifying requirements, or increasing promotional visibility.
 
-### 5. Optimize Marketing Budget Allocation
+### 5. Optimize marketing budget allocation
 
 Reduce marketing spend on consistently disengaged customers and allocate resources toward higher-return customer segments.
 
