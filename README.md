@@ -177,6 +177,8 @@ Reduce marketing spend on consistently disengaged customers and allocate resourc
 
 ## ⚙ Tools & Techniques
 
-- Python (Pandas, NumPy, Matplotlib, Seaborn)
-- Machine Learning (Logistic Regression, Random Forest)
-- Customer Segmentation (K-Means, PCA)
+- Python
+- Data preprocessing (Pandas, NumPy)
+- Data visualization (Matplotlib, Seaborn)
+- Machine learning (Logistic Regression, Random Forest)
+- Customer segmentation (K-Means, PCA)
